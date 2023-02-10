@@ -1,6 +1,6 @@
 # 여기는 백준 풀이를 업로드 하는 곳입니다.
-<br>
-<br>
+## This is the place to upload the Baekjoon (problem solving platform) solution code
+
 
 [![Solved.ac
 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=mychan0926)](https://solved.ac/mychan0926) <img src="http://mazandi.herokuapp.com/api?handle=mychan0926&theme=cold"/>
