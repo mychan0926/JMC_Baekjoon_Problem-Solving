@@ -5,6 +5,7 @@
 using namespace std;
 
 
+
 int solution(vector<int> ingredient) {
     list<int> l;
     l.push_back(0);
@@ -51,36 +52,34 @@ int solution(vector<int> ingredient) {
             {
                 int i = 0;
                 auto p = j;
-                auto kl= j;
+                auto kl = j;
                 answer++;
                 kl--;
-                if(kl!=l.end())
+                if (*kl != 0)
                 {
-                kl--;
+                    kl--;
                 }
-                 if(kl!=l.end())
+                if (*kl != 0)
                 {
-                kl--;
+                    kl--;
                 }
-                 if(kl!=l.end())
+                if (*kl != 0)
                 {
-                kl--;
+                    kl--;
                 }
-                if(kl!=l.end())
+                if (*kl != 0)
                 {
-                    j=kl;
+                    kl--;
                 }
-                else
+                if (j != l.begin())
                 {
-                    j=l.begin();
+                    j = kl;
                 }
-                
-                
                 l.erase(p++);
                 l.erase(p++);
                 l.erase(p++);
                 l.erase(p);
-                
+
 
 
             }
