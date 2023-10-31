@@ -55,7 +55,7 @@ int main()
 	{
 		int j = i+1;
 		int tmax = 0;
-
+		int h = 0;
 		while(j<v.size())
 		{
 			int index = check(v[i].first, v[j].first);
@@ -78,6 +78,18 @@ int main()
 				b2 = v[j].second;
 				b1 = v[i].second;
 			}
+			if (j != i + 1)
+			{
+				if(tmax + 1 < v[j - 1].first.size()&& tmax + 1 < v[j].first.size())
+				{
+					if (v[j - 1].first[tmax + 1] == v[j].first[tmax + 1])
+					{
+						break;
+					}
+				}
+				
+			}
+			
 
 			if (max < index)
 			{
