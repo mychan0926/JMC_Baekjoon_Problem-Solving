@@ -36,6 +36,8 @@ int check(string a,string b)
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+cin.tie(NULL);
 	vector <pair<string, int>> v;
 	int a;
 
