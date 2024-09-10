@@ -11,19 +11,21 @@ long long t(long long a, long long b)
 {
 	int t1 = a;
 	int t2 = b;
-	while (1){
-		if (t1 == v[t1]){
+	while (1) {
+		if (t1 == v[t1]) {
+			v[a] = t1;
 			break;
 		}
-		else{
+		else {
 			t1 = v[t1];
 		}
 	}
-	while (1){
-		if (t2 == v[t2]){
+	while (1) {
+		if (t2 == v[t2]) {
+			v[b] = t1;
 			break;
 		}
-		else{
+		else {
 			t2 = v[t2];
 		}
 	}
@@ -41,22 +43,24 @@ long long t(long long a, long long b)
 }
 
 int main() {
-
-	long long N,M;
-	cin >> N>>M;
-	v.resize(N,0);
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	long long N, M;
+	cin >> N >> M;
+	v.resize(N, 0);
 	for (int i = 0; i < v.size(); i++)
 	{
 		v[i] = i;
 	}
 	for (int i = 0; i < M; i++)
 	{
-		int a, b,c;
-		cin >> a >> b>>c;
-		s.push_back({c,a-1,b-1});
+		int a, b, c;
+		cin >> a >> b >> c;
+		s.push_back({ c,a - 1,b - 1 });
 	}
-	sort(s.begin(),s.end());
-	for (int i = 0; i < M;i++)
+	sort(s.begin(), s.end());
+	for (int i = 0; i < M; i++)
 	{
 		if (t(s[i][1], s[i][2]) == 0)
 		{
